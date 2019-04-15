@@ -13,10 +13,8 @@ var gulp = require("gulp"),
         gulp.src("node_modules/bootstrap/fonts/*")
             .pipe(gulp.dest("src/oscar/static/oscar/fonts/"));
 
-        gulp.src([
-            "node_modules/bootstrap-datetime-picker/js/*.min.js",
-            "node_modules/bootstrap-datetime-picker/css/*.min.css"
-        ]).pipe(gulp.dest("src/oscar/static/oscar/js/bootstrap-datetimepicker"));
+    gulp.src("node_modules/bootstrap/dist/js/bootstrap.min.js")
+        .pipe(gulp.dest("src/oscar/static/oscar/js/bootstrap4"));
 
         gulp.src("node_modules/bootstrap-datetime-picker/js/locales/*")
             .pipe(gulp.dest("src/oscar/static/oscar/js/bootstrap-datetimepicker/locales"));
