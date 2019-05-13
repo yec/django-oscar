@@ -27,9 +27,9 @@
     "tinymce": "^5.1.4"
   },
   "scripts": {
-    "build": "gulp",
-    "start": "gulp watch",
-    "eslint": "./node_modules/.bin/eslint src/oscar/static/oscar/js/oscar/"
+    "build": "gulp copy && gulp scss",
+    "watch": "gulp watch",
+    "eslint": "./node_modules/.bin/eslint src/oscar/static_src/oscar/js/oscar/"
   },
   "license": "MIT",
   "homepage": "https://github.com/django-oscar/django-oscar#readme"
