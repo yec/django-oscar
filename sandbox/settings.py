@@ -410,28 +410,6 @@ OSCAR_ORDER_STATUS_CASCADE = {
     'Complete': 'Shipped',
 }
 
-# LESS/CSS
-# ========
-
-# We default to using CSS files, rather than the LESS files that generate them.
-# If you want to develop Oscar's CSS, then set OSCAR_USE_LESS=True to enable the
-# on-the-fly less processor.
-OSCAR_USE_LESS = False
-
-
-# Sentry
-# ======
-
-if env('SENTRY_DSN', default=None):
-    RAVEN_CONFIG = {'dsn': env('SENTRY_DSN', default=None)}
-    LOGGING['handlers']['sentry'] = {
-        'level': 'ERROR',
-        'class': 'raven.contrib.django.raven_compat.handlers.SentryHandler',
-    }
-    LOGGING['root']['handlers'].append('sentry')
-    INSTALLED_APPS.append('raven.contrib.django.raven_compat')
-
-
 # Sorl
 # ====
 
